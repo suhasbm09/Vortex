@@ -1,5 +1,7 @@
 # PROVEXA: Decentralized Social Media with On-Chain Trust & AI Moderation
 
+![App Preview](assets/preview.png)
+
 > **A next-generation decentralized social platform: verifiable identity, on-chain transparency, and AI-powered trust.**
 
 [![Built with Solana](https://img.shields.io/badge/Built%20with-Solana-3a3a3a?logo=solana)](https://solana.com/) [![Built with FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi)](https://fastapi.tiangolo.com/) [![Frontend: React](https://img.shields.io/badge/Frontend-React-61dafb?logo=react)](https://react.dev/)
