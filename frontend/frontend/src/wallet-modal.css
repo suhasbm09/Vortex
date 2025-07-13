@@ -1,0 +1,29 @@
+/* Glassy, black wallet modal for Solana Wallet Adapter */
+.wallet-adapter-modal-wrapper,
+.wallet-adapter-modal {
+  background: rgba(10, 10, 15, 0.85) !important;
+  backdrop-filter: blur(16px) saturate(180%) !important;
+  border-radius: 1.25rem !important;
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.65) !important;
+  border: 1.5px solid rgba(120, 119, 198, 0.25) !important;
+}
+
+.wallet-adapter-modal-title {
+  color: #fff !important;
+}
+
+.wallet-adapter-modal-list,
+.wallet-adapter-modal-list .wallet-adapter-button {
+  background: transparent !important;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button {
+  border-radius: 0.75rem !important;
+  color: #fff !important;
+  background: rgba(30, 30, 40, 0.7) !important;
+  transition: background 0.2s;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button:hover {
+  background: rgba(120, 119, 198, 0.15) !important;
+} 
