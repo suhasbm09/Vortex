@@ -160,6 +160,12 @@ const Post: React.FC<PostProps> = ({ post, onLike, onUnlike, openModal, openMeta
                   <SparklesIcon className="h-3 w-3 text-white" />
                 </div>
               )}
+              {/* Solana Logged Badge */}
+              {(post.solanaTxHash || post.solanaLogged) && (
+                <span className="ml-2 px-3 py-1 rounded-2xl bg-gradient-to-r from-green-500/20 to-emerald-500/20 text-green-400 text-xs font-bold border border-green-500/30 backdrop-blur-sm flex items-center gap-1">
+                  <ShieldCheckIcon className="h-4 w-4 inline-block text-green-400" /> Logged on Solana
+                </span>
+              )}
             </div>
             {/* Shortened Wallet Address */}
             <p className="text-sm text-[var(--color-text-muted)] font-medium">

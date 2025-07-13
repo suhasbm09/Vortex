@@ -2,6 +2,8 @@
 
 ![App Preview](assets/preview.png)
 
+[▶️ Watch Demo on YouTube](https://youtu.be/8jXftY6zo0U)
+
 > **A next-generation decentralized social platform: verifiable identity, on-chain transparency, and AI-powered trust.**
 
 [![Built with Solana](https://img.shields.io/badge/Built%20with-Solana-3a3a3a?logo=solana)](https://solana.com/) [![Built with FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi)](https://fastapi.tiangolo.com/) [![Frontend: React](https://img.shields.io/badge/Frontend-React-61dafb?logo=react)](https://react.dev/)

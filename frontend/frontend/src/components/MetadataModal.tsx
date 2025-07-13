@@ -106,12 +106,12 @@ const MetadataModal: React.FC<MetadataModalProps> = ({ isOpen, onClose, post }) 
                }}>
             <div className="flex items-center justify-between mb-6">
               <h4 className="text-xl font-bold text-white flex items-center space-x-3">
-                <div className="h-6 w-6 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+                <div className={`h-6 w-6 rounded-full flex items-center justify-center ${post.solanaTxHash || post.solanaLogged ? 'bg-gradient-to-br from-green-500 to-emerald-500' : 'bg-gradient-to-br from-yellow-500 to-orange-500'}`}> 
+                  <span className={`text-white text-sm font-bold`}>{post.solanaTxHash || post.solanaLogged ? '✓' : '!'}</span>
                 </div>
                 <span>Solana Blockchain Status</span>
               </h4>
-              {post.solanaLogged ? (
+              {(post.solanaTxHash || post.solanaLogged) ? (
                 <span className="px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 text-green-400 rounded-2xl text-sm font-bold backdrop-blur-sm">
                   Verified on Blockchain
                 </span>
@@ -121,7 +121,7 @@ const MetadataModal: React.FC<MetadataModalProps> = ({ isOpen, onClose, post }) 
                 </span>
               )}
             </div>
-            {post.solanaLogged && post.solanaTxHash ? (
+            {(post.solanaTxHash || post.solanaLogged) && post.solanaTxHash ? (
               <div className="space-y-4">
                 <div className="flex items-center justify-between p-4 bg-white/5 rounded-2xl border border-white/20 backdrop-blur-sm">
                   <span className="text-sm font-semibold text-[var(--color-text-muted)]">Transaction Hash:</span>
