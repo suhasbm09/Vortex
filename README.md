@@ -15,6 +15,11 @@
 - Moderates all content with **AI (LLM) trust scoring**
 - Delivers a modern, privacy-first, censorship-resistant social experience
 
+## ⚙️ Dev Environment Notes
+This app is deployed on Solana Devnet.  
+- Use Phantom wallet connected to Devnet.  
+- Request free SOL via [Solana Devnet Faucet](https://solfaucet.com/). 
+
 ## Features
 - **Web3 Login:** Secure, wallet-based authentication
 - **On-Chain Logging:** All actions are recorded on Solana for transparency
