@@ -190,6 +190,10 @@ const CreatePost: React.FC<CreatePostProps> = ({ onPostCreated }) => {
       toast.error('Image size must be less than 1MB. Please choose a smaller image.');
       return;
     }
+    if (isSubmitting) {
+      toast.error('Post is already being submitted. Please wait.');
+      return;
+    }
     setIsSubmitting(true);
     const solanaAddress = publicKey.toBase58();
     const timestamp = Date.now();
@@ -249,7 +253,19 @@ const CreatePost: React.FC<CreatePostProps> = ({ onPostCreated }) => {
       } catch (err: unknown) {
         const error = err as Error;
         console.error('Solana logging failed:', error);
-        toast.error('❌ Blockchain logging failed. Your post will not be on-chain.');
+        
+        // Check for specific error types
+        if (error.message.includes('already been processed')) {
+          toast.error('❌ Transaction already processed. Your post may have been logged.');
+          // Still consider it logged since the transaction was processed
+          solanaLogged = true;
+        } else if (error.message.includes('insufficient funds')) {
+          toast.error('❌ Insufficient SOL for transaction fee. Please add some SOL to your wallet.');
+        } else if (error.message.includes('User rejected')) {
+          toast.error('❌ Transaction was rejected by user.');
+        } else {
+          toast.error('❌ Blockchain logging failed. Your post will not be on-chain.');
+        }
       }
 
       // Create post data for backend (only fields expected by backend)

@@ -305,7 +305,7 @@ const Dashboard: React.FC = () => {
             >
               Feed
             </button>
-            <button
+            {/* <button
               className={`px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 ${
                 tab === 'explore' 
                   ? 'bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-secondary)] text-white shadow-lg' 
@@ -314,7 +314,7 @@ const Dashboard: React.FC = () => {
               onClick={() => setTab('explore')}
             >
               Explore
-            </button>
+            </button> */}
             <button
               className="ml-4 px-8 py-4 rounded-2xl font-bold text-lg bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-accent-secondary)] text-white hover:from-[var(--color-accent-secondary)] hover:to-[var(--color-accent)] transition-all duration-300 shadow-lg hover:scale-105"
               onClick={() => navigate('/create-post')}

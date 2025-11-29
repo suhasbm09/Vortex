@@ -34,7 +34,7 @@ const LoginPage: React.FC = () => {
         {/* Primary accent glow */}
         <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-accent-secondary)] opacity-15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute top-1/2 -right-20 w-[400px] h-[400px] bg-gradient-to-br from-[var(--color-accent-secondary)] to-[var(--color-accent)] opacity-10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
-        <div className="absolute -bottom-32 left-1/3 w-[300px] h-[300px] bg-gradient-to-br from-[var(--color-accent)] to-purple-600 opacity-8 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '2s' }} />
+        {/* <div className="absolute -bottom-32 left-1/3 w-[300px] h-[300px] bg-gradient-to-br from-[var(--color-accent)] to-purple-600 opacity-8 rounded-full blur-2xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '2s' }} /> */}
         
                  {/* Subtle grid pattern */}
          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.02%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
